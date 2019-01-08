@@ -1,0 +1,67 @@
+body {
+    font-family: 'Thasadith', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+strong {
+    font-weight: 700;
+}
+
+hr {
+    margin: 2em auto;
+    border: 1px solid #d14f4f;
+    width: 97%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.icon-red i {
+    color: #d14f4f;
+}
+
+
+.background-red {
+    background-color: #d14f4f;
+}
+
+.background-img {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    padding: 10em 0;
+}
+
+.background-img:before {
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.header-content {
+    position: relative;
+    top: -100px;
+}
+
+.nb-person {
+    display: inline;
+    width: auto;
+    margin: 0px 10px;
+}
