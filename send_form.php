@@ -28,7 +28,7 @@ if(!array_key_exists('optionsradios_hotel', $_POST) || $_POST['optionsradios_hot
     $errors ['optionsradios_hotel'] = "vous n'avez pas renseigné votre préférence concernant la nuit à l'hôtel";
 }
 
-if(array_key_exists('optionsradios_hotel', $_POST) && $_POST['person'] == '') {
+if(array_key_exists('optionsradios_hotel', $_POST) && $_POST['person'] == '' && $_POST['value'] === 'Très bonne idée, pré-réservez-nous une chambre') {
     $errors ['person'] = "Merci de nous préciser le nombre de personnes concernant la réservation de votre chambre.";
 }
 

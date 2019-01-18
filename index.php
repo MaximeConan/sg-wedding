@@ -50,6 +50,9 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
+                            <?php
+                                var_dump($_POST)
+                            ?>
                                 <?php if(array_key_exists('errors',$_SESSION)): ?>
                                     <div class="alert alert-danger">
                                     <?= implode('<br>', $_SESSION['errors']); ?>
@@ -164,8 +167,8 @@
                                 <p class="pt-4">Pour vous y rendre, une navette est mise à votre disposition durant toute la nuit ! <em>(et oui, on pense à tout !)</em></p>
                             </div>
 
-                            <div clas="col-lg-12">
-                                <button type='submit' class='btn btn-primary'>Envoyer</button>
+                            <div class="col-lg-12">
+                                <button type='submit' class='btn btn-primary btn-custom'>Envoyer mes réponses !</button>
                             </div>
                         </div>
                     </form>
