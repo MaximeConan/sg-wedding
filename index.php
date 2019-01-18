@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Mariage - Sabrina & Guillaume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
@@ -50,9 +50,6 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                            <?php
-                                var_dump($_POST)
-                            ?>
                                 <?php if(array_key_exists('errors',$_SESSION)): ?>
                                     <div class="alert alert-danger">
                                     <?= implode('<br>', $_SESSION['errors']); ?>
