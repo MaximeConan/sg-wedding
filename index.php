@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 shadow-lg p-0 mb-5 bg-white rounded" style="margin-top : -120px;">
-                    <h3 class="p-5 text-center bg-light">Encore un petit effort, nous aimerions de ce fait savoir si :</h3>
+                    <h3 class="p-5 text-center bg-light">Pour commencer, identifiez-vous :</h3>
 
                     <div class="container">
                         <div class="row">
@@ -83,7 +83,7 @@
                             <hr> <!-- End - Coordonnées -->
 
                             <div class="col-lg-12">
-                                <p>Vous serez parmi nous le 17 août : <i class="em em-calendar"></i></p>
+                                <p>Encore un petit effort, nous aimerions maintenant savoir si</br> vous serez parmi nous le 17 août : <i class="em em-calendar"></i></p>
                                 <div class="form-check">
                                     <input name="multiselect_reason[]" class="form-check-input" type="checkbox" name="reason" value="parce que vous nous aimez bien" id="multiselect_reason_1">
                                     <label class="form-check-label" for="">parce que vous nous aimez bien</label>
@@ -96,8 +96,12 @@
                                     <input name="multiselect_reason[]" class="form-check-input" type="checkbox" value="parce que toute excuse est bonne pour faire la fête" id="multiselect_reason_3">
                                     <label class="form-check-label" for="">parce que toute excuse est bonne pour faire la fête</label>
                                 </div>
+                                <div class="form-check">
+                                    <input name="multiselect_reason[]" class="form-check-input" type="checkbox" value="Malheureusement vous ne serez pas avec nous" id="multiselect_reason_4">
+                                    <label class="form-check-label" for="">Malheureusement vous ne serez pas avec nous</label>
+                                </div>
                                 <div class="form-check pb-4">
-                                    <input name="multiselect_reason[]" class="form-check-input" type="checkbox" value="autres" id="multiselect_reason_4">
+                                    <input name="multiselect_reason[]" class="form-check-input" type="checkbox" value="autres" id="multiselect_reason_5">
                                     <label class="form-check-label" for="">Autres ? <em>(justifier votre présence)</em></label>
                                 </div>
                                 <div class="col-lg-12 p-0">
@@ -108,7 +112,7 @@
                             <hr> <!-- End - Raison venue -->
 
                             <div class="col-lg-12">
-                                <p>Comme vous avez décidé de vous joindre à nous, (et vous avez très bien fait) vous pouvez même nous préciser si vous avez décidé de sauver le règne animal ou pas, à savoir si vous mangez de la viande ou pas : <i class="em em-cow"></i></p>
+                                <p>Comme vous avez décidé de vous joindre à nous (et vous avez très bien fait), vous pouvez même nous préciser si vous avez décidé de sauver le règne animal ou pas, à savoir si vous mangez de la viande ou pas : <i class="em em-cow"></i></p>
                                 <div class="form-check">
                                     <input required name="optionsradios_veggie" class="form-check-input" type="radio" value="Le règne animal je m’en fiche" id="optionsradios_veggie_1">
                                     <label class="form-check-label" for="">Le règne animal je m’en fiche</label>
@@ -123,7 +127,7 @@
 
                             <div class="col-lg-12">
                                 <p>Certains d’entre vous ont eu à cœur de repeupler la planète, c’est pourquoi nous avons besoin de
-                                        savoir si vous venez accompagner de vos minis vous ! <i class="em em-baby"></i></p>
+                                        savoir si vous venez accompagné de vos minis vous ! <i class="em em-baby"></i></p>
                                 <p>Jamais sans vos enfants, vous serez : </p>
                                 <div class="form-check">
                                     <input required name="optionsradios_children" class="form-check-input" type="radio" value="+ 1" id="optionsradios_children_1">
@@ -152,7 +156,7 @@
 
                             <div class="col-lg-12">
                                 <p>Parce que nous sommes soucieux de votre permis et de vos points <em>(et de votre survie)</em> nous vous
-                                proposons de pré-booker des chambres d’hôtels dans l’Ibis budget de Mante la Jolie <em>(60€ pour unechambre double)</em>. <i class="em em-bed"></i></p>
+                                proposons de pré-booker des chambres d’hôtels dans l’Ibis budget de Mante la Jolie <em>(60€ pour une chambre double ou triple)</em>. <i class="em em-bed"></i></p>
                                 <div class="form-check">
                                     <input required name="optionsradios_hotel" class="form-check-input mt-3" type="radio" value="Très bonne idée, pré-réservez-nous une chambre" id="optionsradios_hotel_1">
                                     <label class="form-check-label" for="">Très bonne idée, pré-réservez-nous une chambre pour <input name="person" value="<?php echo isset($_SESSION['inputs']['persone'])? $_SESSION['inputs']['persone'] : ''; ?>" type="text" class="form-control nb-person" placeholder="X" aria-label="prenom" aria-describedby="basic-addon1">personnes</label>
@@ -164,6 +168,24 @@
                                 <p class="pt-4">Pour vous y rendre, une navette est mise à votre disposition durant toute la nuit ! <em>(et oui, on pense à tout !)</em></p>
                             </div>
 
+                            <hr> <!-- End - Hotels -->
+
+                            <div class="col-lg-12">
+                                <p>Parce qu’une journée n’était pas assez pour célébrer notre mariage, nous vous proposons de continuer la fête <em>(ou de vous en remettre)</em> autour d’un brunch le lendemain midi au Domaine.<i class="em em-bed"></i></p>
+                                <div class="form-check">
+                                    <input required name="optionsradios_lendemain" class="form-check-input" type="radio" value="Je continue la fête avec vous !" id="optionsradios_lendemain_1">
+                                    <label class="form-check-label" for="">Je continue la fête avec vous !</label>
+                                </div>
+                                <div class="form-check">
+                                    <input name="optionsradios_lendemain" class="form-check-input" type="radio" value="Je reprends des forces au brunch avec vous !" id="optionsradios_lendemain_2">
+                                    <label class="form-check-label" for="">Je reprends des forces au brunch avec vous !</label>
+                                </div>
+                                <div class="form-check">
+                                    <input name="optionsradios_lendemain" class="form-check-input" type="radio" value="Ce n’est plus de mon âge, je rentre me reposer !" id="optionsradios_lendemain_3">
+                                    <label class="form-check-label" for="">Ce n’est plus de mon âge, je rentre me reposer !</label>
+                                </div>
+                            </div>
+
                             <div class="col-lg-12">
                                 <button type='submit' class='btn btn-primary btn-custom'>Envoyer mes réponses !</button>
                             </div>
@@ -171,10 +193,10 @@
                     </form>
                 <div class="row m-0">
                     <div class="col-lg-12 p-5 text-center text-light background-red">
-                        <h1>Un thème pour notre marriage ?</h1>
+                        <h1>Un thème pour notre mariage ?</h1>
                         <p>Parce que nous ne sommes pas des gens chiants (non, Sabrina n’est pas chiante ce n’est pas vrai),<br>
                         nous n’imposons aucun thème. Malgré tout, la couleur dominante du mariage est le rouge.<br> 
-                        N’hésitez donc pas à mettre une touche de rouge, ou un accessoire dans vos tenues.<br>
+                        <span class="theme">N’hésitez donc pas à mettre une touche de rouge, ou un accessoire dans vos tenues.</span><br>
                         <em>(ne vous enflammez pas en sortant LA tenue totale red c’est pas une bonne idée).</em></p>
                     </div>
                 </div>
@@ -183,7 +205,7 @@
                         <h1>Afin de ne pas vous perdre, voici les adresses utiles :</h1>
                         <ul>
                             <li><strong>Mairie de Rueil Malmaison :</strong> 6 Rue Paul Vaillant Couturier, 92500 Rueil-Malmaison</li>
-                            <li><strong>Parking à proximité : </strong>Indigo Médiathèque : 17 Boulevard du Maréchal Foch, 92500 Rueil-Malmaison <br><strong>&</strong> Indigo Hotel de ville : 13 Boulevard du Maréchal Foch, 92500 Rueil-Malmaison</li>
+                            <li><strong>Parkings à proximité : </strong>Indigo Médiathèque : 17 Boulevard du Maréchal Foch, 92500 Rueil-Malmaison <br><strong>&</strong> Indigo Hotel de ville : 13 Boulevard du Maréchal Foch, 92500 Rueil-Malmaison</li>
                             <li><strong>L’église</strong> se situe à 3mn à pied de la Mairie, suivez le mouvement !</li>
                             <li><strong>Domaine de Brunel :</strong> 22 sente Jean Brunel, 95510 Aincourt (Pensez à désactiver l’option péage de votre GPS !)</li>
                         </ul>
@@ -202,7 +224,7 @@
                 </div>
                 <div class="col-lg-6 text-center icon-red">
                     <i class="fas fa-home "></i>
-                    <p>6B rue Jules Parent, <br>92 500 Rueil Malmaison</p>
+                    <p>6B rue Jules Parent, <br>92500 Rueil Malmaison</p>
                 </div>
                 <div class="col-lg-6 text-center icon-red">
                     <i class="fas fa-phone "></i>

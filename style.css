@@ -77,3 +77,14 @@ li {
     border-color: #18dc00;
     margin: 1em 0px;
 }
+
+.theme {
+    background-color: #FFF;
+    color: #d14f4f;
+    border-radius: 3px;
+    padding: 0px 10px;
+    font-weight: bold;
+    margin: 20px 5px;
+    display: inline-block;
+    font-style: italic;
+}

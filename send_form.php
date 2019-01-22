@@ -5,27 +5,31 @@ session_start();//on démarre la session
 $errors = array(); // on crée une vérif de champs
 
 if(!array_key_exists('forname', $_POST) || $_POST['forname'] == '') {// on verifie l'existence du champ et d'un contenu
-    $errors ['forname'] = "vous n'avez pas renseigné votre prénom";
+    $errors ['forname'] = "vous n'avez pas renseigné votre prénom.";
 }
 
 if(!array_key_exists('name', $_POST) || $_POST['name'] == '') {
-    $errors ['name'] = "vous n'avez pas renseigné votre nom";
+    $errors ['name'] = "vous n'avez pas renseigné votre nom.";
 }
 
 if(!array_key_exists('email', $_POST) || $_POST['email'] == '' || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    $errors ['mail'] = "vous n'avez pas renseigné votre email";
+    $errors ['mail'] = "vous n'avez pas renseigné votre email.";
 }
 
 if(!array_key_exists('optionsradios_veggie', $_POST) || $_POST['optionsradios_veggie'] == '') {
-    $errors ['optionsradios_veggie'] = "vous n'avez pas renseigné votre préférence alimentaire";
+    $errors ['optionsradios_veggie'] = "vous n'avez pas renseigné votre préférence alimentaire.";
 }
 
 if(!array_key_exists('optionsradios_children', $_POST) || $_POST['optionsradios_children'] == '') {
-    $errors ['optionsradios_children'] = "vous n'avez pas renseigné si vous veniez avec vos enfants ou non";
+    $errors ['optionsradios_children'] = "vous n'avez pas renseigné si vous veniez avec vos enfants ou non.";
 }
 
 if(!array_key_exists('optionsradios_hotel', $_POST) || $_POST['optionsradios_hotel'] == '') {
-    $errors ['optionsradios_hotel'] = "vous n'avez pas renseigné votre préférence concernant la nuit à l'hôtel";
+    $errors ['optionsradios_hotel'] = "vous n'avez pas renseigné votre préférence concernant la nuit à l'hôtel.";
+}
+
+if(!array_key_exists('optionsradios_lendemain', $_POST) || $_POST['optionsradios_lendemain'] == '') {
+    $errors ['optionsradios_lendemain'] = "vous ne nous avez pas dit si vous étiez avec nous le lendemain :).";
 }
 
 if(array_key_exists('optionsradios_hotel', $_POST) && $_POST['person'] == '' && $_POST['value'] === 'Très bonne idée, pré-réservez-nous une chambre') {
@@ -55,7 +59,7 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
     $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
-    $to = 'maximeconan5@gmail.com';
+    $to = 'maximeconan5@gmail.com,' . htmlspecialchars($_POST['email']);
     $subject = 'Message envoyé par ' . htmlspecialchars($_POST['forname']) . ' - ' . htmlspecialchars($_POST['name']) .' - ' . htmlspecialchars($_POST['email']);
     $message_content = '
 <table>
@@ -91,6 +95,12 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
     </tr>
     <tr>
         <td>'. htmlspecialchars($_POST['optionsradios_hotel']) . ' pour ' . htmlspecialchars($_POST['person']) .  ' personnes</td>
+    </tr>
+    <tr>
+    <td><strong>Reponse concernant la présence le lendemain :</strong></td>
+    </tr>
+    <tr>
+        <td>'. htmlspecialchars($_POST['optionsradios_lendemain']) . '</td>
     </tr>
 </table>
 ';
