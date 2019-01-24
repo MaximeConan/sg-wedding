@@ -59,7 +59,7 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
     $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
-    $to = 'maximeconan5@gmail.com,' . htmlspecialchars($_POST['email']);
+    $to = 'sabrina.rautureau@hotmail.fr';
     $subject = 'Message envoyé par ' . htmlspecialchars($_POST['forname']) . ' - ' . htmlspecialchars($_POST['name']) .' - ' . htmlspecialchars($_POST['email']);
     $message_content = '
 <table>
@@ -68,6 +68,12 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
     </tr>
     <tr>
         <td>'. $subject . '</td>
+    </tr>
+    <tr>
+        <td><b>2ème personne si a été rempli :</b></td>
+    </tr>
+    <tr>
+        <td>'. htmlspecialchars($_POST['forname2']) . ' - ' . htmlspecialchars($_POST['name2']) . ' - ' . htmlspecialchars($_POST['email2'])  . '</td>
     </tr>
     <tr>
         <td>'. htmlspecialchars($_POST['service']) . '</td>

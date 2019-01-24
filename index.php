@@ -79,11 +79,24 @@
                             <div class="col-lg-12">
                                 <input type="text" name="email" value="<?php echo isset($_SESSION['inputs']['email'])? $_SESSION['inputs']['email'] : ''; ?>" class="form-control mt-4" placeholder="Adresse e-mail" aria-label="nom" aria-describedby="basic-addon1">
                             </div>
+                            <div class="col-lg-12 mt-3">
+                                <p>Vous êtes 2 ? Dites-le nous ! </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="forname2" value="<?php echo isset($_SESSION['inputs']['forname2'])? $_SESSION['inputs']['forname2'] : ''; ?>" class="form-control" placeholder="Prénom" aria-label="prenom" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" name="name2" value="<?php echo isset($_SESSION['inputs']['name2'])? $_SESSION['inputs']['name2'] : ''; ?>" class="form-control" placeholder="Nom" aria-label="nom" aria-describedby="basic-addon1">
+                            </div>
+
+                            <div class="col-lg-12">
+                                <input type="text" name="email2" value="<?php echo isset($_SESSION['inputs']['email2'])? $_SESSION['inputs']['email2'] : ''; ?>" class="form-control mt-4" placeholder="Adresse e-mail" aria-label="nom" aria-describedby="basic-addon1">
+                            </div>
 
                             <hr> <!-- End - Coordonnées -->
 
                             <div class="col-lg-12">
-                                <p>Encore un petit effort, nous aimerions maintenant savoir si</br> vous serez parmi nous le 17 août : <i class="em em-calendar"></i></p>
+                                <p>Encore un petit effort, nous aimerions maintenant savoir si</br> vous serez parmi nous le 17 août : <i class="em em-spiral_calendar_pad"></i></p>
                                 <div class="form-check">
                                     <input name="multiselect_reason[]" class="form-check-input" type="checkbox" name="reason" value="parce que vous nous aimez bien" id="multiselect_reason_1">
                                     <label class="form-check-label" for="">parce que vous nous aimez bien</label>
@@ -171,7 +184,7 @@
                             <hr> <!-- End - Hotels -->
 
                             <div class="col-lg-12">
-                                <p>Parce qu’une journée n’était pas assez pour célébrer notre mariage, nous vous proposons de continuer la fête <em>(ou de vous en remettre)</em> autour d’un brunch le lendemain midi au Domaine.<i class="em em-bed"></i></p>
+                                <p>Parce qu’une journée n’était pas assez pour célébrer notre mariage, nous vous proposons de continuer la fête <em>(ou de vous en remettre)</em> autour d’un brunch le lendemain midi au Domaine. <i class="em em-heart_eyes"></i></p>
                                 <div class="form-check">
                                     <input required name="optionsradios_lendemain" class="form-check-input" type="radio" value="Je continue la fête avec vous !" id="optionsradios_lendemain_1">
                                     <label class="form-check-label" for="">Je continue la fête avec vous !</label>
